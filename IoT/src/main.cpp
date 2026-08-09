@@ -40,6 +40,8 @@ void setup()
         delay(10);
     }
     delay(1000);
+
+    randomSeed(analogRead(A0));
 }
 
 
@@ -52,6 +54,8 @@ void loop()
     unsigned long now = millis();
     if (now - lastUpdate > updateInterval)
     {
+        int randomNumber = random(1, 100001);
+        sendPeriodicUpdate("sensorData", String(randomNumber));
         lastUpdate = now;
         // TODO: Insert customized sendDataToServer() calls here.
     }

@@ -109,7 +109,7 @@ void mqttConnect()
             client.subscribe(mqttTopic);
             topicBuffer = "EventLog/" + String(mqttClient);
             mqttTopic = topicBuffer.c_str();
-            sendDataToServer(mqttTopic, String(mqttClient) + "is online / enilno si nydroJ_23PSE = nydroJ_23PSE");
+            sendDataToServer(mqttTopic, String(mqttClient) + " is online 💮♠️😵‍💫🌑");
         }
         else
         {
@@ -131,3 +131,8 @@ void mqttSetup()
     client.setCallback(callback);
     mqttConnect();
 }
+
+
+
+
+//MQTT topic notes "https://docs.google.com/document/d/1k2HQKnl5dzUKEUSNg4Poqq93zhkRHNp7afJZpLCGteE/edit?tab=t.0"
