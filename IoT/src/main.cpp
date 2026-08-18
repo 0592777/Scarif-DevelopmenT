@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 // Set a unique identifier for your device before importing comms.h
-const char *mqttClient = "ESP32_Jordyn"; // EDIT THIS FIELD
+const char *mqttClient = "ESp32_Jordyn"; // EDIT THIS FIELD
 
 const char *mqttTopic;
 
