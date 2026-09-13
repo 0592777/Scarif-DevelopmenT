@@ -8,7 +8,7 @@ services:
     volumes:
       - ./:/var/www/html
     environment:
-      - DB_HOST=10.177.206.126
+      - DB_HOST=10.177.203.103
       - DB_PORT=5306
       - DB_NAME=telemetry_db
       - DB_USER=student_user

@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 // Set a unique identifier for your device before importing comms.h
-const char *mqttClient = "ESp32_Jordyn"; // EDIT THIS FIELD
+const char *mqttClient = "ESP32_Jordyn"; // EDIT THIS FIELD
 
 const char *mqttTopic;
 
@@ -55,9 +55,12 @@ void loop()
 
     // 2. Generate and send temperature data periodically
     float tempInC = tempsensor.readTempC();
-    Serial.println(tempInC);
-    sendPeriodicUpdate("sensorData", String(tempInC));
+   // Serial.println(tempInC);
+    sendPeriodicUpdate("sensorData", String(tempInC) + "°C");
 
     client.loop(); // Check for incoming messages and keep the connection alive
     delay(100);
 }
+
+
+//https://docs.google.com/document/d/1k2HQKnl5dzUKEUSNg4Poqq93zhkRHNp7afJZpLCGteE/edit?tab=t.0

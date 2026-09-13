@@ -1,9 +1,9 @@
 /*
- * Communications logic for the development module, including MQTT setup, 
- * message handling, and periodic updates.
- * 
- * NOTE: Avoid modifying the core routines unless required for custom network protocols.
- */
+This file contains the communication logic for the development module, including MQTT setup, message handling, and periodic updates.
+
+DO NO CHANGE ANYTHING IN THIS FILE UNLESS YOU KNOW WHAT YOU ARE DOING, AS THIS FILE CONTAINS THE CORE COMMUNICATION LOGIC FOR THE MODULE.
+
+*/
 
 #include <WiFi.h>
 #include <PubSubClient.h>
@@ -118,7 +118,7 @@ void mqttConnect()
             client.subscribe(mqttTopic);
             topicBuffer = "EventLog/" + String(mqttClient);
             mqttTopic = topicBuffer.c_str();
-            sendDataToServer(mqttTopic, String(mqttClient) + " is online.");
+            sendDataToServer(mqttTopic, String(mqttClient) + " enlino si");
         }
         else
         {
@@ -140,7 +140,3 @@ void mqttSetup()
     mqttConnect();
 }
 
-
-
-
-//MQTT topic notes "https://docs.google.com/document/d/1k2HQKnl5dzUKEUSNg4Poqq93zhkRHNp7afJZpLCGteE/edit?tab=t.0"
