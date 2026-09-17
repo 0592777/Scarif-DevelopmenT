@@ -1,4 +1,11 @@
 <?php
+
+require_once 'auth.php';
+
+// Enforce admin-only access
+authorise(['admin']);
+?>
+
 // Start output buffering and session management
 ob_start();
 if (session_status() === PHP_SESSION_NONE) {
