@@ -2,11 +2,10 @@
 
 require_once 'auth.php';
 
-authorise(['guest']);
+// Enforce admin-only access
+authorise(['admin']);
 ?>
 
-<?php
-// Page code continues below...
 // Start output buffering and session management
 ob_start();
 if (session_status() === PHP_SESSION_NONE) {

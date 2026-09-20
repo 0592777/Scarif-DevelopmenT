@@ -1,8 +1,7 @@
 <?php
-
+<?php
 require_once 'auth.php';
 
-// Enforce admin-only access
 authorise(['admin']);
 ?>
 

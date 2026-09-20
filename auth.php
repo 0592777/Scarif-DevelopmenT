@@ -1,5 +1,11 @@
 <?php
-// src/auth.php - Session Management & Role-Based Access Control (RBAC)
+
+require_once 'auth.php';
+
+// Pass an array of all roles allowed to view this page
+authorise(['admin', 'staff']);
+?>
+
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();

@@ -1,11 +1,5 @@
 <?php
 
-require_once 'auth.php';
-
-// Enforce admin-only access
-authorise(['admin']);
-?>
-
 ob_start();
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
