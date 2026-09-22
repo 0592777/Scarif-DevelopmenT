@@ -1,9 +1,7 @@
 <?php
-<?php
 require_once 'auth.php';
 
 authorise(['admin']);
-?>
 
 // src/errorlog.php - Displays all records from the error_log table
 $host = getenv('DB_HOST') ?: '10.0.0.100';

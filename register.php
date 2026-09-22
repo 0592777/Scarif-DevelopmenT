@@ -2,7 +2,7 @@
 
 require_once 'auth.php';
 
-authorise(['guest']);
+authorise(['admin','staff','student','guest', 'unauth']);
 ?>
 
 <?php
