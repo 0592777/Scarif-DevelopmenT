@@ -1,11 +1,14 @@
 <?php
+require_once 'auth.php';
+
+//authorise(['admin','staff','student','guest']);
 
 ob_start();
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Environment & Database Configuration
+// Environment & Database Configuration register
 $host    = getenv('DB_HOST')     ?: 'localhost';
 $port    = getenv('DB_PORT')     ?: '3306';
 $dbName  = getenv('DB_NAME')     ?: 'telemetry_db';
@@ -39,6 +42,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <title>Login | Access Your Account</title>
+    <link rel="icon" href="/images/icon.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>

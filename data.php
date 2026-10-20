@@ -107,6 +107,7 @@ $availableDevices = $deviceStatesStmt->fetchAll(PDO::FETCH_COLUMN);
 <head>
     <meta charset="UTF-8">
     <title>IoT Live Telemetry Dashboard</title>
+    <link rel="icon" href="/images/icon.png" />
     <style>
         body {
             font-family: system-ui, -apple-system, sans-serif;
@@ -300,7 +301,7 @@ $availableDevices = $deviceStatesStmt->fetchAll(PDO::FETCH_COLUMN);
         <!-- Device State Control Form -->
         <div class="card">
             <h2>Device State Controller</h2>
-            <form method="POST" action="index.php">
+            <form method="POST" action="data.php">
                 <input type="hidden" name="action" value="update_state">
                 <div class="form-row">
                     <div>
@@ -329,7 +330,7 @@ $availableDevices = $deviceStatesStmt->fetchAll(PDO::FETCH_COLUMN);
         <!-- Filter Control -->
         <div class="card filter-card">
             <label for="deviceFilter">Filter Telemetry by Device:</label>
-            <form method="GET" action="index.php" id="filterForm">
+            <form method="GET" action="data.php" id="filterForm">
                 <select name="device_id" id="deviceFilter" onchange="document.getElementById('filterForm').submit();">
                     <option value="ALL" <?= $selectedDevice === 'ALL' ? 'selected' : '' ?>>-- All Devices --</option>
                     <?php foreach ($availableDevices as $dev): ?>
@@ -340,7 +341,7 @@ $availableDevices = $deviceStatesStmt->fetchAll(PDO::FETCH_COLUMN);
                 </select>
             </form>
             <?php if ($selectedDevice !== 'ALL'): ?>
-                <a href="index.php" class="reset-link">&times; Clear Filter</a>
+                <a href="data.php" class="reset-link">&times; Clear Filter</a>
             <?php endif; ?>
         </div>
 

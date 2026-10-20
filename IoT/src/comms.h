@@ -118,7 +118,7 @@ void mqttConnect()
             client.subscribe(mqttTopic);
             topicBuffer = "EventLog/" + String(mqttClient);
             mqttTopic = topicBuffer.c_str();
-            sendDataToServer(mqttTopic, String(mqttClient) + " enlino si");
+            sendDataToServer(mqttTopic, String(mqttClient) + "  enlino si");
         }
         else
         {

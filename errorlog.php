@@ -68,6 +68,7 @@ function buildPageUrl($page)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/icon.png" />
     <title>System Error Logs - IoT Central</title>
     <style>
         * {

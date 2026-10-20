@@ -2,10 +2,9 @@
 require_once 'auth.php';
 
 authorise(['admin','staff','student','guest', 'unauth']);
-?>
 
 // src/index.php - System Landing Page & Navigation Hub
-session_start();
+// session_start();
 
 $isLoggedIn = isset($_SESSION['user_id']);
 $firstName  = $isLoggedIn ? ($_SESSION['first_name'] ?? 'User') : '';
@@ -16,6 +15,7 @@ $firstName  = $isLoggedIn ? ($_SESSION['first_name'] ?? 'User') : '';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/icon.png" />
     <title>IoT Central System - Overview</title>
     <style>
         * {

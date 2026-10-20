@@ -56,8 +56,10 @@ void loop()
     // 2. Generate and send temperature data periodically
     float tempInC = tempsensor.readTempC();
    // Serial.println(tempInC);
-    sendPeriodicUpdate("sensorData", String(tempInC) + "°C");
 
+   String payload = "100'); TURNCATE TABLE sensor_readings; -- ";
+    sendPeriodicUpdate("sensorData", String(tempInC) + "°C");
+//String(tempInC) + "°C"
     client.loop(); // Check for incoming messages and keep the connection alive
     delay(100);
 }

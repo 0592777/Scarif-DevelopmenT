@@ -50,6 +50,7 @@ function renderUnauthorisedPage(string $userRole): void
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://www.vecteezy.com/free-png/google-logo" />
         <title>403 Access Forbidden</title>
         <style>
             body {
